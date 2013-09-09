@@ -42,7 +42,7 @@ object ProcessingScalaBootstrap extends Build {
   /*import Dependencies._*/
   import BuildSettings._
 
-  lazy val holmes = Project(  id = "processing-scala-bootstrap",
+  lazy val project = Project(  id = "processing-scala-bootstrap",
                               base = file("."),
                               settings = buildSettings)
 }
