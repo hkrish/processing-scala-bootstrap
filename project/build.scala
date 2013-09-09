@@ -4,7 +4,7 @@ import Keys._
 object BuildSettings {
   val buildOrganization = "hkrish"
   val buildVersion      = "0.1.1"
-  val buildScalaVersion = "2.9.2"
+  val buildScalaVersion = "2.10.2"
 
   val buildSettings = Defaults.defaultSettings ++ Seq (
     organization := buildOrganization,
@@ -14,7 +14,7 @@ object BuildSettings {
     )
 }
 
-// Shell prompt which show the current project, 
+// Shell prompt which show the current project,
 // git branch and build version
 object ShellPrompt {
   object devnull extends ProcessLogger {
@@ -27,7 +27,7 @@ object ShellPrompt {
       getOrElse "-" stripPrefix "## "
   )
 
-  val buildShellPrompt = { 
+  val buildShellPrompt = {
     (state: State) => {
       val currProject = Project.extract (state).currentProject.id
       "%s:%s:%s> ".format (
